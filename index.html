@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dávid & Hanna esküvője</title>
+<meta name="description" content="Kozák Dávid és Halász Hanna esküvője, 2027. július 3., Bolyki Pincészet, Eger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="hero">
+  <img class="hero-photo" src="images/pair.jpg" width="900" height="1200" alt="Dávid és Hanna">
+  <p class="hero-names">Dávid <span class="hero-amp">&amp;</span> Hanna</p>
+  <p class="hero-sub">Kozák Dávid &amp; Halász Hanna esküvője</p>
+  <p class="hero-date">2027. július 3., szombat</p>
+  <p class="hero-venue">Bolyki Pincészet · Eger</p>
+  <div class="scroll-hint"></div>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <p class="lede">Nagy örömünkre szolgál, hogy ezen a napon veletek ünnepelhetünk.</p>
+    <p>Ezen az oldalon mindent megtaláltok, amire a nagy napra készülve szükségetek lehet — a helyszínt, a szállási lehetőségeket, és itt tudtok majd visszajelezni is a részvételetekről. A programot és a további részleteket hamarosan feltöltjük.</p>
+  </section>
+
+  <section>
+    <h2>A nap</h2>
+    <div class="detail-row">
+      <div class="detail-label">Dátum</div>
+      <div class="detail-value"><strong>2027. július 3.</strong>, szombat</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Helyszín</div>
+      <div class="detail-value"><strong>Bolyki Pincészet</strong>, Eger</div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-label">Program</div>
+      <div class="detail-value">Részletek hamarosan</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Helyszín</h2>
+    <p>Az esküvőt a <strong>Bolyki Pincészetben</strong> tartjuk, Egerben. A cím: <strong>3300 Eger, Bolyki-völgy</strong>. Az alábbi gombbal megnézhetitek a helyet térképen.</p>
+    <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Bolyki+Pinc%C3%A9szet+Eger" target="_blank" rel="noopener">Megnyitás térképen</a>
+  </section>
+
+  <section>
+    <h2>Szállás</h2>
+    <p>Ha egerben szeretnétek éjszakázni az esküvő előtt vagy után, az alábbi linkeken böngészhettek a foglalható szálláshelyek között. Szállást a környező településeken is találtok, például Egerszalókon és Noszvajon.</p>
+    <div class="btn-row"><a class="btn" href="https://www.booking.com/searchresults.hu.html?ss=Eger%2C+Heves+megye%2C+Magyarorsz%C3%A1g&checkin=2027-07-03&checkout=2027-07-04&group_adults=2&no_rooms=1&group_children=0&lang=hu" target="_blank" rel="noopener">Booking.com</a><a class="btn" href="https://www.airbnb.hu/s/Eger/homes?place_id=ChIJI0CwlHiNQEcRJByNlFmyrWM&amp;refinement_paths%5B%5D=%2Fhomes&amp;location_bb=QkABXUGjxaVCP22aQaJ9kg%3D%3D&amp;acp_id=98ea7553-94d0-4d43-9bd8-6e05fa058762&amp;date_picker_type=calendar&amp;checkin=2027-07-03&amp;checkout=2027-07-04&amp;adults=2&amp;search_type=autocomplete_click" target="_blank" rel="noopener">Airbnb</a></div>
+  </section>
+
+  <section id="rsvp">
+    <h2>Visszajelzés</h2>
+    <p>Kérünk, jelezzetek vissza, hogy tudjunk tervezni. Az űrlap kitöltése után egy e-mailben tudjátok elküldeni a válaszotokat Dávidnak — a gombra kattintva ez automatikusan előkészül nektek.</p>
+
+    <form class="form-grid" id="rsvp-form">
+      <div>
+        <label for="rsvp-name">Név (vagy nevek, ha párban jelentkeztek)</label>
+        <input type="text" id="rsvp-name" required placeholder="Kovács Anna és Kovács Béla">
+      </div>
+
+      <div>
+        <label>Részt tudtok venni?</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="attending" value="Igen, ott leszünk" checked>
+            <span>Igen, ott leszünk</span>
+          </label>
+          <label>
+            <input type="radio" name="attending" value="Sajnos nem tudunk menni">
+            <span>Sajnos nem</span>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <label for="rsvp-guests">Hányan jöttök összesen?</label>
+        <input type="number" id="rsvp-guests" min="1" max="10" value="1">
+      </div>
+
+      <div>
+        <label for="rsvp-note">Üzenet, allergia vagy egyéb megjegyzés (nem kötelező)</label>
+        <textarea id="rsvp-note" placeholder="Pl. ételallergia, különleges kérés..."></textarea>
+      </div>
+
+      <div>
+        <button type="submit" class="btn">Visszajelzés küldése</button>
+        <p class="form-msg" id="rsvp-msg">Megnyitjuk az e-mail kliensedet az üzenettel — csak küldeni kell.</p>
+      </div>
+    </form>
+  </section>
+
+  <section>
+    <h2>Kapcsolat</h2>
+    <p>Ha bármi kérdésetek van, keressétek Dávidot bizalommal.</p>
+    <div class="contact-line">
+      <span>Dávid</span>
+      <a href="tel:+36308833610">+36 30 883 3610</a>
+      <a href="https://wa.me/36308833610" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="monogram">D &amp; H</div>
+  <p>Alig várjuk, hogy veletek ünnepelhessünk Egerben.</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

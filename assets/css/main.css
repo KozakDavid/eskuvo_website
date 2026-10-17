@@ -1,0 +1,288 @@
+/* Palette: Cool Steel #94A5B3 · Dusty Olive #71713B · Bone #E2DCD0
+   Light: bone page, olive accent, steel hero band.
+   Dark: olive-black page, steel accent, deep steel hero band. */
+:root {
+  --bg: #E2DCD0;
+  --bg-panel: #EEEAE1;
+  --ink: #2A2A1F;
+  --ink-soft: #55544A;
+  --accent: #5E5E31;
+  --accent-soft: #71713B;
+  --btn-text: #EEEAE1;
+  --line: #C9C3B4;
+  --label: #4F6171;
+  --steel: #94A5B3;
+  --hero-bg: #94A5B3;
+  --hero-ink: #1F2420;
+  --hero-ink-soft: #2F3A42;
+  --hero-accent: #38381C;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1D1E17;
+    --bg-panel: #272920;
+    --ink: #E2DCD0;
+    --ink-soft: #B3AE9F;
+    --accent: #94A5B3;
+    --accent-soft: #7F92A1;
+    --btn-text: #1D1E17;
+    --line: #3A3C30;
+    --label: #A3A367;
+    --steel: #94A5B3;
+    --hero-bg: #2A3640;
+    --hero-ink: #E2DCD0;
+    --hero-ink-soft: #B9C3CC;
+    --hero-accent: #94A5B3;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1D1E17;
+  --bg-panel: #272920;
+  --ink: #E2DCD0;
+  --ink-soft: #B3AE9F;
+  --accent: #94A5B3;
+  --accent-soft: #7F92A1;
+  --btn-text: #1D1E17;
+  --line: #3A3C30;
+  --label: #A3A367;
+  --steel: #94A5B3;
+  --hero-bg: #2A3640;
+  --hero-ink: #E2DCD0;
+  --hero-ink-soft: #B9C3CC;
+  --hero-accent: #94A5B3;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); }
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Hero */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+  background: var(--hero-bg);
+  color: var(--hero-ink);
+}
+.hero-photo {
+  display: block;
+  width: 500px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+  border-radius: 50%;
+  border: 5px solid var(--bg);
+  margin: 0 0 28px 0;
+}
+.hero-names {
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2.6rem, 9vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.hero-amp { color: var(--hero-accent); font-style: normal; padding: 0 0.1em; }
+.hero-sub {
+  margin-top: 22px;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--hero-ink-soft);
+}
+.hero-date {
+  margin-top: 10px;
+  font-family: "Fraunces", serif;
+  font-size: 1.35rem;
+  color: var(--hero-accent);
+}
+.hero-venue {
+  margin-top: 4px;
+  font-size: 1rem;
+  color: var(--hero-ink-soft);
+}
+.scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 46px;
+  background: linear-gradient(to bottom, transparent, var(--hero-accent));
+}
+
+section {
+  padding: 64px 0;
+  border-top: 1px solid var(--line);
+}
+section:first-of-type { border-top: none; }
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin: 0 0 20px 0;
+  color: var(--ink);
+}
+p { margin: 0 0 14px 0; max-width: 60ch; }
+.lede {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+  max-width: 34ch;
+}
+
+.detail-row {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.detail-row:last-child { border-bottom: none; }
+.detail-label {
+  flex: 0 0 110px;
+  color: var(--label);
+  font-size: 0.92rem;
+  padding-top: 2px;
+}
+.detail-value { flex: 1; }
+.detail-value strong { font-weight: 500; }
+.pending {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--label);
+  border: 1px solid var(--steel);
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-top: 4px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--btn-text);
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  transition: opacity 0.15s ease;
+}
+.btn:hover { opacity: 0.85; }
+.btn-ghost {
+  background: none;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+}
+
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* RSVP form */
+.form-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 8px;
+}
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--label);
+  margin-bottom: 6px;
+}
+input[type="text"], input[type="number"], textarea, select {
+  width: 100%;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 11px 13px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 1px;
+}
+textarea { resize: vertical; min-height: 70px; }
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+}
+.radio-group label {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  padding: 11px 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.radio-group input { position: absolute; opacity: 0; pointer-events: none; }
+.radio-group input:checked + span { font-weight: 500; }
+.radio-group label:has(input:checked) {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.form-msg {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  display: none;
+}
+.form-msg.show { display: block; }
+
+.contact-line {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+footer {
+  padding: 50px 0 70px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+footer .monogram {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .detail-row { flex-direction: column; gap: 4px; }
+  .detail-label { flex: none; }
+}
