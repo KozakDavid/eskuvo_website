@@ -1,4 +1,4 @@
-DÁVID & HANNA ESKÜVŐJE – weboldal
+HANNA & DÁVID ESKÜVŐJE – weboldal
 
 Mappák
   index.html          a teljes oldal (itt írhatod át a szövegeket)
