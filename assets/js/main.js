@@ -17,5 +17,5 @@ document.getElementById('rsvp-form').addEventListener('submit', function (e) {
   var body = encodeURIComponent(bodyLines.join('\n'));
   var msgEl = document.getElementById('rsvp-msg');
   msgEl.classList.add('show');
-  window.location.href = 'mailto:davidensalmanca@gmail.com?subject=' + subject + '&body=' + body;
+  window.location.href = 'mailto:davidensalamanca@gmail.com?subject=' + subject + '&body=' + body;
 });
