@@ -89,6 +89,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 56px; }
 body {
   margin: 0;
@@ -479,6 +480,57 @@ textarea { resize: vertical; min-height: 70px; }
 }
 .form-msg.show { display: block; }
 
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.btn-send { position: relative; }
+.btn-send:disabled { cursor: progress; opacity: 0.85; }
+.btn-send .spinner {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 18px; height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+.btn-send.loading .btn-label { visibility: hidden; }
+.btn-send.loading .spinner { opacity: 1; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#rsvp-form { transition: opacity 0.35s ease, transform 0.35s ease; }
+#rsvp-form.leaving { opacity: 0; transform: translateY(-8px); }
+
+.rsvp-thanks {
+  padding: 48px 28px 52px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.rsvp-thanks.show { opacity: 1; transform: none; }
+.rsvp-thanks h3 {
+  margin: 18px 0 8px;
+  font-size: 1.9rem;
+  font-style: italic;
+  color: var(--accent);
+  outline: none;
+}
+.rsvp-thanks p { margin: 0 auto; color: var(--ink-soft); }
+.thanks-check {
+  width: 76px;
+  height: 76px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.thanks-check circle { stroke-dasharray: 151; stroke-dashoffset: 151; }
+.thanks-check path { stroke-dasharray: 36; stroke-dashoffset: 36; }
+.rsvp-thanks.show .thanks-check circle { animation: draw 0.7s ease forwards 0.15s; }
+.rsvp-thanks.show .thanks-check path { animation: draw 0.4s ease forwards 0.8s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
 footer {
   padding: 56px 24px 70px;
   text-align: center;
@@ -506,6 +558,8 @@ footer .monogram {
   html { scroll-behavior: auto; }
   .hero-arrow { animation: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
+  .rsvp-thanks, #rsvp-form { transition: none; }
+  .thanks-check circle, .thanks-check path { stroke-dashoffset: 0; animation: none !important; }
 }
 
 @media (max-width: 760px) {

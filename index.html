@@ -111,7 +111,7 @@
     <p class="eyebrow">Visszajelzés</p>
     <h2>Jelezzetek vissza, <em>jöttök-e!</em></h2>
   </div>
-  <p class="sec-lede reveal">Hogy mindenre fel tudjunk készülni, töltsétek ki az alábbi visszajelzőt. A gombra kattintva egy kész e-mail nyílik meg — csak el kell küldeni.</p>
+  <p class="sec-lede reveal">Hogy mindenre fel tudjunk készülni, töltsétek ki az alábbi visszajelzőt.</p>
 
   <div class="rsvp-card reveal">
     <div class="rsvp-card-head">
@@ -149,10 +149,16 @@
       </div>
 
       <div>
-        <button type="submit" class="btn">Visszajelzés küldése</button>
-        <p class="form-msg" id="rsvp-msg">Megnyitjuk az e-mail kliensedet az üzenettel — csak küldeni kell.</p>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-send" id="rsvp-send"><span class="btn-label">Visszajelzés küldése</span><span class="spinner" aria-hidden="true"></span></button>
+        <p class="form-msg" id="rsvp-msg" role="status"></p>
       </div>
     </form>
+    <div class="rsvp-thanks" id="rsvp-thanks" hidden>
+      <svg class="thanks-check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+      <h3 tabindex="-1">Köszönjük a választ!</h3>
+      <p id="rsvp-thanks-text"></p>
+    </div>
   </div>
 </section>
 
