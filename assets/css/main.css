@@ -1,91 +1,92 @@
-/* Palette: Cool Steel #94A5B3 · Dusty Olive #71713B · Bone #E2DCD0
-   Light: bone page, olive accent, steel hero band, deep steel info band.
-   Dark: olive-black page, steel accent, deep steel hero band. */
+/* Palette: Soft Sage Green #C5D5CB · Whisper Blush #F5E6E8 · Warm Ivory #FCF9F2
+   Light: ivory page, sage hero and info band, blush tagline and venue band,
+   deep sage for text accents so everything stays readable.
+   Dark: sage-black page, sage accent, muted blush highlights. */
 :root {
-  --bg: #E2DCD0;
-  --bg-panel: #EEEAE1;
-  --ink: #2A2A1F;
-  --ink-soft: #55544A;
-  --accent: #5E5E31;
-  --accent-soft: #71713B;
-  --btn-text: #EEEAE1;
-  --line: #C9C3B4;
-  --label: #4F6171;
-  --steel: #94A5B3;
-  --hero-bg: #94A5B3;
-  --hero-ink: #1F2420;
-  --hero-ink-soft: #2F3A42;
-  --hero-accent: #38381C;
-  --nav-bg: rgba(42, 42, 31, 0.92);
-  --nav-ink: #E2DCD0;
-  --nav-accent: #C9C98F;
-  --band-bg: #5E5E31;
-  --band-ink: #EEEAE1;
-  --dark-bg: #2F3A42;
-  --dark-panel: #384650;
-  --dark-line: #4A5966;
-  --dark-ink: #E2DCD0;
-  --dark-soft: #B9C3CC;
-  --dark-accent: #C9C98F;
-  --mid-bg: #D6CFC0;
+  --bg: #FCF9F2;
+  --bg-panel: #FFFDF9;
+  --ink: #2F3B34;
+  --ink-soft: #5E6B63;
+  --accent: #56725F;
+  --accent-soft: #8FA899;
+  --btn-text: #FCF9F2;
+  --line: #DCE4DE;
+  --label: #5F7366;
+  --steel: #C5D5CB;
+  --hero-bg: #C5D5CB;
+  --hero-ink: #26332B;
+  --hero-ink-soft: #44564B;
+  --hero-accent: #8C5A63;
+  --nav-bg: rgba(252, 249, 242, 0.94);
+  --nav-ink: #2F3B34;
+  --nav-accent: #56725F;
+  --band-bg: #F5E6E8;
+  --band-ink: #6E4A51;
+  --dark-bg: #C5D5CB;
+  --dark-panel: #FCF9F2;
+  --dark-line: #B3C6BA;
+  --dark-ink: #2F3B34;
+  --dark-soft: #56655C;
+  --dark-accent: #3F5A4A;
+  --mid-bg: #F5E6E8;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1D1E17;
-    --bg-panel: #272920;
-    --ink: #E2DCD0;
-    --ink-soft: #B3AE9F;
-    --accent: #94A5B3;
-    --accent-soft: #7F92A1;
-    --btn-text: #1D1E17;
-    --line: #3A3C30;
-    --label: #A3A367;
-    --steel: #94A5B3;
-    --hero-bg: #2A3640;
-    --hero-ink: #E2DCD0;
-    --hero-ink-soft: #B9C3CC;
-    --hero-accent: #94A5B3;
-    --nav-bg: rgba(20, 21, 16, 0.92);
-    --nav-ink: #E2DCD0;
-    --nav-accent: #A3A367;
-    --band-bg: #3D3D21;
-    --band-ink: #E2DCD0;
-    --dark-bg: #232F38;
-    --dark-panel: #2C3A44;
-    --dark-line: #3D4C58;
-    --dark-ink: #E2DCD0;
-    --dark-soft: #B9C3CC;
-    --dark-accent: #C9C98F;
-    --mid-bg: #23241C;
+    --bg: #1A201C;
+    --bg-panel: #232B26;
+    --ink: #F3F0E8;
+    --ink-soft: #B5C2BA;
+    --accent: #C5D5CB;
+    --accent-soft: #9DB3A6;
+    --btn-text: #1A201C;
+    --line: #34403A;
+    --label: #D9B9BF;
+    --steel: #C5D5CB;
+    --hero-bg: #2A3A31;
+    --hero-ink: #FCF9F2;
+    --hero-ink-soft: #C5D5CB;
+    --hero-accent: #E8C9CE;
+    --nav-bg: rgba(26, 32, 28, 0.94);
+    --nav-ink: #FCF9F2;
+    --nav-accent: #C5D5CB;
+    --band-bg: #3A2E31;
+    --band-ink: #F5E6E8;
+    --dark-bg: #24302A;
+    --dark-panel: #2C3A33;
+    --dark-line: #3B4A42;
+    --dark-ink: #FCF9F2;
+    --dark-soft: #B5C2BA;
+    --dark-accent: #C5D5CB;
+    --mid-bg: #2A2426;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1D1E17;
-  --bg-panel: #272920;
-  --ink: #E2DCD0;
-  --ink-soft: #B3AE9F;
-  --accent: #94A5B3;
-  --accent-soft: #7F92A1;
-  --btn-text: #1D1E17;
-  --line: #3A3C30;
-  --label: #A3A367;
-  --steel: #94A5B3;
-  --hero-bg: #2A3640;
-  --hero-ink: #E2DCD0;
-  --hero-ink-soft: #B9C3CC;
-  --hero-accent: #94A5B3;
-  --nav-bg: rgba(20, 21, 16, 0.92);
-  --nav-ink: #E2DCD0;
-  --nav-accent: #A3A367;
-  --band-bg: #3D3D21;
-  --band-ink: #E2DCD0;
-  --dark-bg: #232F38;
-  --dark-panel: #2C3A44;
-  --dark-line: #3D4C58;
-  --dark-ink: #E2DCD0;
-  --dark-soft: #B9C3CC;
-  --dark-accent: #C9C98F;
-  --mid-bg: #23241C;
+  --bg: #1A201C;
+  --bg-panel: #232B26;
+  --ink: #F3F0E8;
+  --ink-soft: #B5C2BA;
+  --accent: #C5D5CB;
+  --accent-soft: #9DB3A6;
+  --btn-text: #1A201C;
+  --line: #34403A;
+  --label: #D9B9BF;
+  --steel: #C5D5CB;
+  --hero-bg: #2A3A31;
+  --hero-ink: #FCF9F2;
+  --hero-ink-soft: #C5D5CB;
+  --hero-accent: #E8C9CE;
+  --nav-bg: rgba(26, 32, 28, 0.94);
+  --nav-ink: #FCF9F2;
+  --nav-accent: #C5D5CB;
+  --band-bg: #3A2E31;
+  --band-ink: #F5E6E8;
+  --dark-bg: #24302A;
+  --dark-panel: #2C3A33;
+  --dark-line: #3B4A42;
+  --dark-ink: #FCF9F2;
+  --dark-soft: #B5C2BA;
+  --dark-accent: #C5D5CB;
+  --mid-bg: #2A2426;
 }
 
 * { box-sizing: border-box; }
@@ -114,6 +115,7 @@ h1, h2, h3 { font-family: "Fraunces", serif; font-weight: 400; }
   justify-content: space-between;
   padding: 0 28px;
   background: var(--nav-bg);
+  border-bottom: 1px solid var(--line);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -233,7 +235,7 @@ h1, h2, h3 { font-family: "Fraunces", serif; font-weight: 400; }
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 .sec-dark .eyebrow { color: var(--dark-accent); }
 .eyebrow::before, .eyebrow::after {
@@ -373,7 +375,7 @@ h2 em { font-style: italic; color: var(--accent); }
   font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 .venue-head h3 { margin: 0; font-size: 1.6rem; }
 .venue-addr { margin: 2px 0 0; font-size: 0.88rem; color: var(--ink-soft); }
