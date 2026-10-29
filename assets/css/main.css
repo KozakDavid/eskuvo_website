@@ -1,92 +1,92 @@
-/* Palette: Soft Sage Green #C5D5CB · Whisper Blush #F5E6E8 · Warm Ivory #FCF9F2
-   Light: ivory page, sage hero and info band, blush tagline and venue band,
-   deep sage for text accents so everything stays readable.
-   Dark: sage-black page, sage accent, muted blush highlights. */
+/* Palette: Soft Leaf #B8D0AE · Warm Ivory #FCF9F2 · White #FFFFFF
+   Light: ivory page, soft leaf hero and info band, white tagline and venue band,
+   deep leaf green for text accents so everything stays readable.
+   Dark: leaf-black page, soft leaf accent. */
 :root {
   --bg: #FCF9F2;
-  --bg-panel: #FFFDF9;
-  --ink: #2F3B34;
-  --ink-soft: #5E6B63;
-  --accent: #56725F;
-  --accent-soft: #8FA899;
-  --btn-text: #FCF9F2;
-  --line: #DCE4DE;
-  --label: #5F7366;
-  --steel: #C5D5CB;
-  --hero-bg: #C5D5CB;
-  --hero-ink: #26332B;
-  --hero-ink-soft: #44564B;
-  --hero-accent: #8C5A63;
-  --nav-bg: rgba(252, 249, 242, 0.94);
-  --nav-ink: #2F3B34;
-  --nav-accent: #56725F;
-  --band-bg: #F5E6E8;
-  --band-ink: #6E4A51;
-  --dark-bg: #C5D5CB;
-  --dark-panel: #FCF9F2;
-  --dark-line: #B3C6BA;
-  --dark-ink: #2F3B34;
-  --dark-soft: #56655C;
-  --dark-accent: #3F5A4A;
-  --mid-bg: #F5E6E8;
+  --bg-panel: #FFFFFF;
+  --ink: #2C3A2A;
+  --ink-soft: #5A6857;
+  --accent: #4F6F45;
+  --accent-soft: #93B086;
+  --btn-text: #FFFFFF;
+  --line: #DFE7D8;
+  --label: #587052;
+  --steel: #B8D0AE;
+  --hero-bg: #B8D0AE;
+  --hero-ink: #22301F;
+  --hero-ink-soft: #3E5238;
+  --hero-accent: #43603A;
+  --nav-bg: rgba(255, 255, 255, 0.94);
+  --nav-ink: #2C3A2A;
+  --nav-accent: #4F6F45;
+  --band-bg: #FFFFFF;
+  --band-ink: #4F6F45;
+  --dark-bg: #B8D0AE;
+  --dark-panel: #FFFFFF;
+  --dark-line: #A5BF99;
+  --dark-ink: #2C3A2A;
+  --dark-soft: #4E5E4A;
+  --dark-accent: #3D5934;
+  --mid-bg: #FFFFFF;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1A201C;
-    --bg-panel: #232B26;
-    --ink: #F3F0E8;
-    --ink-soft: #B5C2BA;
-    --accent: #C5D5CB;
-    --accent-soft: #9DB3A6;
-    --btn-text: #1A201C;
-    --line: #34403A;
-    --label: #D9B9BF;
-    --steel: #C5D5CB;
-    --hero-bg: #2A3A31;
+    --bg: #181E16;
+    --bg-panel: #20281E;
+    --ink: #F6F3EA;
+    --ink-soft: #B7C4B1;
+    --accent: #B8D0AE;
+    --accent-soft: #93AE86;
+    --btn-text: #181E16;
+    --line: #313D2E;
+    --label: #C9D9C0;
+    --steel: #B8D0AE;
+    --hero-bg: #263424;
     --hero-ink: #FCF9F2;
-    --hero-ink-soft: #C5D5CB;
-    --hero-accent: #E8C9CE;
-    --nav-bg: rgba(26, 32, 28, 0.94);
+    --hero-ink-soft: #B8D0AE;
+    --hero-accent: #DCE8D5;
+    --nav-bg: rgba(24, 30, 22, 0.94);
     --nav-ink: #FCF9F2;
-    --nav-accent: #C5D5CB;
-    --band-bg: #3A2E31;
-    --band-ink: #F5E6E8;
-    --dark-bg: #24302A;
-    --dark-panel: #2C3A33;
-    --dark-line: #3B4A42;
+    --nav-accent: #B8D0AE;
+    --band-bg: #20281E;
+    --band-ink: #FCF9F2;
+    --dark-bg: #222E20;
+    --dark-panel: #2A3827;
+    --dark-line: #3A4A36;
     --dark-ink: #FCF9F2;
-    --dark-soft: #B5C2BA;
-    --dark-accent: #C5D5CB;
-    --mid-bg: #2A2426;
+    --dark-soft: #B7C4B1;
+    --dark-accent: #B8D0AE;
+    --mid-bg: #1D241B;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1A201C;
-  --bg-panel: #232B26;
-  --ink: #F3F0E8;
-  --ink-soft: #B5C2BA;
-  --accent: #C5D5CB;
-  --accent-soft: #9DB3A6;
-  --btn-text: #1A201C;
-  --line: #34403A;
-  --label: #D9B9BF;
-  --steel: #C5D5CB;
-  --hero-bg: #2A3A31;
+  --bg: #181E16;
+  --bg-panel: #20281E;
+  --ink: #F6F3EA;
+  --ink-soft: #B7C4B1;
+  --accent: #B8D0AE;
+  --accent-soft: #93AE86;
+  --btn-text: #181E16;
+  --line: #313D2E;
+  --label: #C9D9C0;
+  --steel: #B8D0AE;
+  --hero-bg: #263424;
   --hero-ink: #FCF9F2;
-  --hero-ink-soft: #C5D5CB;
-  --hero-accent: #E8C9CE;
-  --nav-bg: rgba(26, 32, 28, 0.94);
+  --hero-ink-soft: #B8D0AE;
+  --hero-accent: #DCE8D5;
+  --nav-bg: rgba(24, 30, 22, 0.94);
   --nav-ink: #FCF9F2;
-  --nav-accent: #C5D5CB;
-  --band-bg: #3A2E31;
-  --band-ink: #F5E6E8;
-  --dark-bg: #24302A;
-  --dark-panel: #2C3A33;
-  --dark-line: #3B4A42;
+  --nav-accent: #B8D0AE;
+  --band-bg: #20281E;
+  --band-ink: #FCF9F2;
+  --dark-bg: #222E20;
+  --dark-panel: #2A3827;
+  --dark-line: #3A4A36;
   --dark-ink: #FCF9F2;
-  --dark-soft: #B5C2BA;
-  --dark-accent: #C5D5CB;
-  --mid-bg: #2A2426;
+  --dark-soft: #B7C4B1;
+  --dark-accent: #B8D0AE;
+  --mid-bg: #1D241B;
 }
 
 * { box-sizing: border-box; }
